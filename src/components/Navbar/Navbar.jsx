@@ -1,15 +1,19 @@
 import React, { useState } from 'react'
 import { route } from '../../models/router.model'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { logout } from '../../redux/authSlice'
 
 export const Navbar = () => {
   const [showModal, setShowModal] = useState(false)
+  const dispatch = useDispatch()
 
   const tabs = [
     { name: 'Home', path: route.root.path },
-    { name: 'About', path: route.about.about },
-    { name: 'Categories', path: route.categories.categories },
-    { name: 'Contacts', path: route.contacts.contacts },
+    { name: 'About', path: route.about.path },
+    { name: 'Categories', path: route.categories.path },
+    { name: 'Contacts', path: route.contacts.path },
+    { name: 'Create', path: route.create.path },
   ]
 
   return (
@@ -35,7 +39,7 @@ export const Navbar = () => {
           showModal &&
           <div className='flex flex-col gap-2 bg-stone-100 right-3 py-2 rounded-lg absolute top-16 '>
             <Link to={route.create.path} className='hover:bg-stone-300 rounded-lg px-5 py-1'>Create</Link>
-            <span  className='hover:bg-stone-300 rounded-lg px-5 py-1'>Logout</span>
+            <span  className='hover:bg-stone-300 rounded-lg px-5 py-1 cursor-pointer' onClick={() => dispatch(logout())}>Logout</span>
           </div>
         }
       </div>

@@ -14,7 +14,7 @@ export const AuthForm = () => {
     email: '',
     password: ''
   }
-  const [isSignUp, setIsSignUp] = useState(false)
+  const [isSignUp, setIsSignUp] = useState(true)
   const [showPswd, setShowPswd] = useState(false)
   const [inputs, setInputs] = useState(INITIAL_VALUES)
 

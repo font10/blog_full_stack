@@ -11,6 +11,8 @@ export const FeaturedBlogs = () => {
     { title: 'Blog 6', desc: 'Desc 6', img: 'https://wallpapercave.com/wp/oYVbJir.jpg', category: 'Water', views: 13, author: 'Font', created: '25/09/2023' },
   ]
 
+  
+
   return (
     <div className='flex flex-col justify-center items-center max-w-[1440px] mx-auto p-5'>    
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
