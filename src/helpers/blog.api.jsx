@@ -14,3 +14,7 @@ export const getBlogs = async() => {
   return res.data
 }
 
+export const getBlogById = async(id) => {
+  const res = await axios.get('http://localhost:5000/blog/' + id)
+  return res.data.blog
+}

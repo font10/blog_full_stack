@@ -17,14 +17,14 @@ export const Navbar = () => {
   ]
 
   return (
-    <div className='w-full h-14 px-10 static justify-between flex items-center bg-blue-950'>
+    <div className='w-full h-14 px-10 fixed z-40 justify-between flex items-center bg-blue-950'>
       <div>
         <span className='font-bold text-white'>Blog</span>
       </div>
       <div>
         <ul>
           { 
-            tabs.map(tab => <Link to={tab.path} className='mx-3 text-sm  text-white hover:text-blue-300'>{tab.name}</Link>)
+            tabs.map(tab => <Link to={tab.path} key={crypto.randomUUID()} className='mx-3 text-sm  text-white hover:text-blue-300'>{tab.name}</Link>)
           }
         </ul>
       </div>

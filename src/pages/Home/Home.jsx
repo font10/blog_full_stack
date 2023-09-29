@@ -29,7 +29,7 @@ export const Home = () => {
   }, [activeCategory])
   
   return (
-    <div className='flex flex-col justify-center items-center max-w-[1440px] mx-auto p-5'>    
+    <div className='flex flex-col justify-center items-center max-w-[1440px] mx-auto p-5 mt-16'>    
       <Tabs 
         categoriesSearch={categoriesSearch} 
         activeCategory={activeCategory}

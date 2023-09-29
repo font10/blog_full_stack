@@ -13,7 +13,7 @@ function App() {
         <Route path={ route.root.path } element={<Home />} />
         <Route path={ route.auth.path } element={<Auth />} />
         <Route path={ route.create.path } element={<Create />} />
-        <Route path={ route.details.path } element={<BlogDetails />} />
+        <Route path={`${route.details.path}/:id`} element={<BlogDetails />} />
         <Route path={ route.update.path } element={<UpdatedBlog />} />
       </Routes>
     </div>
