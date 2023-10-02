@@ -19,9 +19,9 @@ export const route = {
     title: 'Update',
     path: '/update',
   },
-  about: {
-    title: 'About',
-    path: '/about',
+  blogs: {
+    title: 'Blogs',
+    path: '/blogs',
   },
   categories: {
     title: 'Categories',

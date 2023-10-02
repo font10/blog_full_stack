@@ -27,7 +27,6 @@ export const AuthForm = () => {
     e.preventDefault()
     userAuthRequest(inputs, isSignUp)
       .then(res => {
-        console.log(res)
         if(isSignUp) { dispatch(login(res)); navigate( route.root.path ) }
       })
       .catch(err => console.log(err))

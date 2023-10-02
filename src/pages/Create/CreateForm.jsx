@@ -64,7 +64,7 @@ export const CreateForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='w-6/12 p-5' encType='multipart/form-data'>
+    <form onSubmit={handleSubmit} className='w-10/12 lg:w-6/12 p-5' encType='multipart/form-data'>
       <div className=''>
         <input 
           type="text" 
