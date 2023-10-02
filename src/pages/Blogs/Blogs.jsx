@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getBlogs } from '../../helpers/blog.api'
-import { beach, bled, boat, coast, footer_img, blogs_img } from '../../utils/images'
+import { footer_img, blogs_img } from '../../utils/images'
 import { FilteredBlogs } from '../Home/Blogs/FilteredBlogs'
 import { Tabs } from './Tabs'
 
@@ -28,23 +28,25 @@ export const Blogs = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeCategory])
 
-  const cards = [
-    { country: 'Spain', site: 'Delta de l\'Ebre', image: boat },
-    { country: 'Slovenia', site: 'Lake Bled', image: bled },
-    { country: 'Spain', site: 'Cala Canyet', image: coast },
-    { country: 'Spain', site: 'Cala Illa Roja', image: beach },
-  ]
+  useEffect(() => {
+    document.documentElement.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // Optional if you want to skip the scrolling animation
+    });
+  }, []);
   
   return (
-    <div className='flex flex-col justify-center items-center bg-[#0a0a0a]'>   
+    <div className='flex flex-col justify-center items-center w-full bg-[#0a0a0a]'>   
       <img src={blogs_img}  alt='' className='lg:h-[850px] w-full' />
       <div className='w-full h-36 bg-stone-950 absolute bottom-12 blur-2xl m-0'></div>
+
       <div className='absolute top-[30%] flex flex-col justify-center items-center'>
         <span className='text-white font-londrina text-7xl'>Blogs</span>
         <p className='font-londrina text-white w-8/12 mt-6'>Nullam scelerisque id magna et accumsan. Nulla facilisi. Integer tempus lacus eget urna egestas, ac suscipit nulla auctor. Fusce efficitur, elit sagittis lobortis volutpat</p>
       </div>
 
-      <div className='max-w-[1440px] flex flex-col items-center mt-20'>
+      <div className='max-w-[1440px] flex flex-col items-center w-full mt-20'>
         <div className='flex flex-col w-full px-14 justify-center items-center text-center'>
           <Tabs activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
         </div> 
@@ -54,8 +56,6 @@ export const Blogs = () => {
           <FilteredBlogs filteredBlogs={filteredBlogs} />
           <FilteredBlogs filteredBlogs={filteredBlogs} />
         </div>
-
-        <span className='font-londrina text-blue-300 mt-14'>All blogs</span>
         
       </div>
 

@@ -43,7 +43,7 @@ export const FilteredBlogs = ({filteredBlogs}) => {
             </div>  
           : <div className='flex flex-col justify-center items-center mx-auto mt-10'>
               <img src={no_blogs} alt='no blogs' width={700} />
-              <span className='text-3xl font-medium mt-10'>No blogs</span>
+              <span className='text-3xl text-white font-medium mt-10'>No blogs</span>
             </div>
         }
         </div>

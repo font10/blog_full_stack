@@ -3,6 +3,8 @@ import { getBlogs } from '../../helpers/blog.api'
 import { beach, bled, boat, coast, footer_img, mountain } from '../../utils/images'
 import { FilteredBlogs } from '../Home/Blogs/FilteredBlogs'
 import { ExploreWorld } from './Blogs/ExploreWorld'
+import { route } from '../../models/router.model'
+import { Link } from 'react-router-dom'
 
 export const Home = () => {
   const [blogs, setBlogs] = useState()
@@ -27,7 +29,7 @@ export const Home = () => {
       <img src={mountain}  alt='' className='lg:h-[850px] w-full' />
       <div className='w-full h-48 bg-stone-950 absolute bottom-5 blur-2xl m-0'></div>
       
-      <ExploreWorld cards={cards } />
+      <ExploreWorld />
 
       <div className='max-w-[1440px] flex flex-col items-center mt-40'>
         <div className='flex flex-col justify-center items-center text-center'>
@@ -43,7 +45,7 @@ export const Home = () => {
           <FilteredBlogs filteredBlogs={filteredBlogs} />
         </div>
 
-        <span className='font-londrina text-blue-300 mt-14'>All blogs</span>
+        <Link to={route.blogs.path} className='font-londrina text-blue-300 mt-14'>All blogs</Link>
         
       </div>
 

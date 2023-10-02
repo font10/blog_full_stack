@@ -1,6 +1,8 @@
 import React from 'react'
+import { cards } from '../../../utils/constants'
 
-export const ExploreWorld = ({cards}) => {
+export const ExploreWorld = () => {
+  
   return (
     <div className='max-w-[1440px] flex flex-col items-center mt-40'>
       <div className='flex flex-col justify-center items-center text-center'>

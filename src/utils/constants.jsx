@@ -1,4 +1,4 @@
-import { all, cascada, castillo, montana, sombrilla, via_lactea } from '../utils/images.jsx'
+import { all, boat, bled, beach, coast, cascada, castillo, montana, sombrilla, via_lactea } from '../utils/images.jsx'
 
 export const categories = [
   'Mountain',
@@ -15,4 +15,11 @@ export const categoriesSearch = [
   { name: 'Coast', icon: sombrilla, border: 'border-orange-500', color: 'text-orange-500', },
   { name: 'Milky way', icon: via_lactea, border: 'border-purple-500', color: 'text-purple-500', },
   { name: 'Architecture', icon: castillo, border: 'border-brown-500', color: 'text-brown-500', },
+]
+
+export const cards = [
+  { country: 'Spain', site: 'Delta de l\'Ebre', image: boat },
+  { country: 'Slovenia', site: 'Lake Bled', image: bled },
+  { country: 'Spain', site: 'Cala Canyet', image: coast },
+  { country: 'Spain', site: 'Cala Illa Roja', image: beach },
 ]
