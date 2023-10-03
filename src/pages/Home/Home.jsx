@@ -52,7 +52,7 @@ export const Home = () => {
       <div className='relative flex flex-row justify-center bottom-0 w-full mt-36'>  
         <img src={footer_img}  alt='' className='lg:h-[850px] w-full' />
         <div className='w-full h-48 bg-stone-950 absolute -top-24 blur-2xl m-0'></div>
-        <div className='absolute text-white bottom-10 flex flex-row items-center gap-2 justify-center font-londrina text-lg'>©2023 DAVID FONT. <span className='text-sm font-londrina'>All rights reserved | HOME BLOGS LOCATIONS</span> </div>
+        <div className='absolute text-white bottom-1 0 flex flex-row items-center gap-2 justify-center font-londrina text-lg'>©2023 DAVID FONT. <span className='text-sm font-londrina'>All rights reserved | HOME BLOGS LOCATIONS</span> </div>
       </div>
     </div>
   )
