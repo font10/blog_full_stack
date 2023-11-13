@@ -1,4 +1,5 @@
-import { all, boat, bled, beach, coast, cascada, castillo, montana, sombrilla, via_lactea } from '../utils/images.jsx'
+import { all, boat, bled, beach, coast, cascada, castillo, cogolls, fangar, lafosca, montana, sombrilla, via_lactea, santllorenc } from '../utils/images.jsx'
+import { CgProfile, MdDashboard,  MdPlace, FaBloggerB } from '../utils/icons.jsx'
 
 export const categories = [
   'Mountain',
@@ -22,4 +23,15 @@ export const cards = [
   { country: 'Slovenia', site: 'Lake Bled', image: bled },
   { country: 'Spain', site: 'Cala Canyet', image: coast },
   { country: 'Spain', site: 'Cala Illa Roja', image: beach },
+  { country: 'Spain', site: 'Cogolls', image: cogolls },
+  { country: 'Spain', site: 'Faro del Fangar', image: fangar },
+  { country: 'Spain', site: 'Cala La Fosca', image: lafosca },
+  { country: 'Spain', site: 'Sant Llorenç del Munt', image: santllorenc },
+]
+
+export const menusDashboard = [
+  { name: 'Home', icon: <MdDashboard size={22} /> },
+  { name: 'Blogs', icon: <FaBloggerB size={22} /> },
+  { name: 'Places', icon: <MdPlace size={22} /> },
+  { name: 'Profile', icon: <CgProfile size={22} /> },
 ]

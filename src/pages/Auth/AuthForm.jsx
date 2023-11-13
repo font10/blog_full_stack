@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { AiOutlineEye, AiOutlineEyeInvisible } from '../../utils/icons'
-import { userAuthRequest } from '../../helpers/user.api'
+import { userAuthRequest } from '../../services/user.api'
 import { useDispatch } from 'react-redux'
 import { login } from '../../redux/authSlice'
 import { useNavigate } from 'react-router-dom'

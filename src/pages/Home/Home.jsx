@@ -1,28 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import { getBlogs } from '../../helpers/blog.api'
-import { beach, bled, boat, coast, footer_img, mountain } from '../../utils/images'
+import { getBlogs } from '../../services/blog.api'
+import { footer_img, mountain } from '../../utils/images'
 import { FilteredBlogs } from '../Home/Blogs/FilteredBlogs'
 import { ExploreWorld } from './Blogs/ExploreWorld'
 import { route } from '../../models/router.model'
 import { Link } from 'react-router-dom'
 
 export const Home = () => {
-  const [blogs, setBlogs] = useState()
   const [filteredBlogs, setFilteredBlogs] = useState()
 
   useEffect(() => {
     getBlogs()
-      .then(res => { setBlogs(res.blogs); setFilteredBlogs(res.blogs) })
+      .then(res => { setFilteredBlogs(res.blogs) })
       .catch(err => console.log(err))
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
-  const cards = [
-    { country: 'Spain', site: 'Delta de l\'Ebre', image: boat },
-    { country: 'Slovenia', site: 'Lake Bled', image: bled },
-    { country: 'Spain', site: 'Cala Canyet', image: coast },
-    { country: 'Spain', site: 'Cala Illa Roja', image: beach },
-  ]
   
   return (
     <div className='flex flex-col justify-center items-center bg-[#0a0a0a]'>   
@@ -41,11 +32,9 @@ export const Home = () => {
 
         <div className='flex flex-col gap-8 my-16 px-5'>
           <FilteredBlogs filteredBlogs={filteredBlogs} />
-          <FilteredBlogs filteredBlogs={filteredBlogs} />
-          <FilteredBlogs filteredBlogs={filteredBlogs} />
         </div>
 
-        <Link to={route.blogs.path} className='font-londrina text-blue-300 mt-14'>All blogs</Link>
+        <Link to={route.blogs.path} className='font-londrina text-blue-300 border-2 border-blue-300 hover:text-blue-200 hover:border-blue-200 px-8 py-2 rounded-3xl mt-14'>All blogs</Link>
         
       </div>
 

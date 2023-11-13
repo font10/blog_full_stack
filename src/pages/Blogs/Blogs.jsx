@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getBlogs } from '../../helpers/blog.api'
+import { getBlogs } from '../../services/blog.api'
 import { footer_img, blogs_img } from '../../utils/images'
 import { FilteredBlogs } from '../Home/Blogs/FilteredBlogs'
 import { Tabs } from './Tabs'
@@ -13,7 +13,6 @@ export const Blogs = () => {
     getBlogs()
       .then(res => { setBlogs(res.blogs); setFilteredBlogs(res.blogs) })
       .catch(err => console.log(err))
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
@@ -25,14 +24,13 @@ export const Blogs = () => {
         return filteredBlogs
       })
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeCategory])
 
   useEffect(() => {
     document.documentElement.scrollTo({
       top: 0,
       left: 0,
-      behavior: "instant", // Optional if you want to skip the scrolling animation
+      behavior: "instant", 
     });
   }, []);
   
@@ -52,8 +50,6 @@ export const Blogs = () => {
         </div> 
 
         <div className='flex flex-col gap-8 my-16 px-5'>
-          <FilteredBlogs filteredBlogs={filteredBlogs} />
-          <FilteredBlogs filteredBlogs={filteredBlogs} />
           <FilteredBlogs filteredBlogs={filteredBlogs} />
         </div>
         

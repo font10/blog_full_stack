@@ -7,17 +7,9 @@ export const route = {
     title: 'Auth',
     path: '/auth',
   },
-  create: {
-    title: 'Create',
-    path: '/create',
-  },
   details: {
     title: 'details',
     path: '/details',
-  },
-  update: {
-    title: 'Update',
-    path: '/update',
   },
   blogs: {
     title: 'Blogs',
@@ -27,8 +19,8 @@ export const route = {
     title: 'Categories',
     path: '/categories',
   },
-  contacts: {
-    title: 'Contacts',
-    path: '/contacts',
+  blogsbyplace: {
+    title: 'blogsByPlace',
+    path: '/place',
   },
 }

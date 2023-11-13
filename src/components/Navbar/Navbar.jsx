@@ -3,7 +3,7 @@ import { route } from '../../models/router.model'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { logout } from '../../redux/authSlice'
-import diafragma from '../../assets/images/diafragma.png'
+import { diafragma } from '../../utils/images'
 import { AiOutlineMenu } from '../../utils/icons'
 
 export const Navbar = () => {
@@ -20,7 +20,6 @@ export const Navbar = () => {
   const tabs = [
     { name: 'Home', path: route.root.path },
     { name: 'Blogs', path: route.blogs.path },
-    { name: 'Locations', path: route.create.path },
   ]
   
   return (

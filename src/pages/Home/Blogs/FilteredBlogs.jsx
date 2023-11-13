@@ -13,15 +13,15 @@ export const FilteredBlogs = ({filteredBlogs}) => {
           ? <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full justify-center">
               {
                 filteredBlogs && filteredBlogs.map((blog) => (
-                  <div key={blog.title} className='group relative text-white w-full text-sm md:text-md'>
+                  <div key={blog.title} className='group relative h-[500px] overflow-hidden group-hover: rounded-[20px] transition-shadow text-white w-full text-sm md:text-md'>
                     <img 
-                      src={`http://localhost:5000/images/` + blog.image.split('_').splice(1).join(' ')} 
-                      alt='milky way' 
-                      className='rounded-[50px] p-8 h-full' 
-                    />
-                    <div className='absolute z-10 bottom-10 p-5 w-full flex flex-col items-center rounded-xl'>
+                      src={blog.image} 
+                      alt='category pic'
+                      className='rounded-[50px] p-8 h-full max-h-[500px] w-full group-hover:rotate-3 group-hover:scale-125 group-hover: rounded-[50px] duration-500 ease-in-out' 
+                    /> 
+                    <div className='absolute z-10 bottom-10 p-5 w-full flex flex-col items-center rounded-xl '>
                       <div className='flex flex-row justify-between items-center'>
-                        <Link to={`${route.details.path}/${blog._id}`} className='text-2xl font-londrina'>{blog.title}</Link> 
+                        <Link to={`${route.details.path}/${blog._id}`} className='text-2xl font-londrina'>{blog.title} </Link> 
                       </div>
                       <div className='flex flex-row justify-between items-center w-5/12 mt-5'>
                         <div className='flex flex-row items-center gap-3'>
