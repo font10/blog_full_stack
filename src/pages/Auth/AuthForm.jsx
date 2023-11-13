@@ -33,7 +33,7 @@ export const AuthForm = () => {
   }
 
   return (
-    <div className='flex flex-col justify-center items-center p-5'>
+    <div className='flex flex-col justify-center items-center h-full p-5'>
       <h1 className='text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-yellow-500'>{ isSignUp ? 'Login' : 'Register' }</h1>
       <form onSubmit={handleSubmit} className='w-full mt-10'>
         {

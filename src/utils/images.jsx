@@ -1,4 +1,5 @@
 import all from '../assets/icons/all.png'
+import aurora from '../assets/images/aurora.jpg'
 import banyoles from '../assets/images/banyoles.jpg'
 import beach from '../assets/images/beach.jpg'
 import bled from '../assets/images/bled.jpg'
@@ -15,6 +16,7 @@ import footer_img from '../assets/images/footer_img.jpg'
 import hero_2 from '../assets/images/hero_2.jpg'
 import lafosca from '../assets/images/lafosca.jpg'
 import locations from '../assets/images/locations.jpg'
+import login_photo from '../assets/images/login_photo.jpg'
 import montana from '../assets/icons/montana.png'
 import mountain from '../assets/images/mountain.jpg'
 import no_blogs from '../assets/images/no_blogs.png'
@@ -26,6 +28,7 @@ import via_lactea from '../assets/icons/via_lactea.png'
 
 export {
   all,
+  aurora,
   banyoles,
   beach,
   blogs_img,
@@ -42,6 +45,7 @@ export {
   hero_2,
   lafosca,
   locations,
+  login_photo,
   montana,
   mountain,
   no_blogs,
