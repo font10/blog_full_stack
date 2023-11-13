@@ -19,21 +19,21 @@ export const Home = () => {
   <div className='flex flex-col relative justify-center items-center bg-[#0a0a0a]'>   
     <section className="relative w-full">        
       <img src={mountain}  alt='' className='lg:h-[850px] w-full' />
-      <section class="absolute flex flex-row w-full top-1/2 -translate-x-1/12 -translate-y-1/2">
-        <div className='flex flex-col w-2/3 items-center mt-20'>
-          <p className='text-8xl font-londrina text-white mb-10 drop-shadow-3xl'>Capture what</p>
-          <div className='flex flex-row gap-5 items-center ml-72'>
-            <img src={camera} alt='' width={160} className='' /> 
-            <span className='text-8xl font-londrina text-white py-3 drop-shadow-3xl'>the eyes see</span>
+      <section className="absolute flex flex-col md:flex-row w-full top-28 lg:top-40 xl:top-1/2 -translate-x-1/12 xl:-translate-y-1/2">
+        <div className='flex flex-col w-full md:w-3/5 lg:-ml-14 ml-0 items-center lg:mt-20'>
+          <p className='text-3xl md:text-5xl lg:text-6xl xl:text-8xl font-londrina text-white mb-10 drop-shadow-3xl'>Capture what</p>
+          <div className='flex flex-row gap-5 items-center xl:ml-72'>
+            <img src={camera} alt='' className='w-14 h-14 md:w-28 md:h-28' /> 
+            <span className='text-3xl md:text-5xl lg:text-6xl xl:text-8xl font-londrina text-white py-3 drop-shadow-3xl'>the eyes see</span>
           </div>
         </div>
-        <div className='w-1/3 flex justify-start'>
-          <img src={hero_2} alt='' className='border-2 border-gray-300 w-60 h-60 inline-block border-dashed shadow-3xl rounded-md shadow-black z-20 -rotate-12' />
-          <img src={vertical} alt='' width={300} className='border-2 border-gray-300 inline-block border-dashed shadow-5xl shadow-black drop-shadow-4xl mt-20 rounded-md -ml-20 rotate-12' fill='none' stroke='black' strokeWidth='2' strokeDasharray='12%2c 17%2c 16'  />
+        <div className='hidden md:w-2/5 md:flex justify-start'>
+          <img src={hero_2} alt='' className='border-2 border-gray-300 w-60 h-60 inline-block border-dashed shadow-3xl rounded-md shadow-black z-30 -rotate-12' />
+          <img src={vertical} alt=''  className='border-2 border-gray-300 w-60 lg:w-72 h-[25rem] inline-block border-dashed z-20 shadow-5xl shadow-black drop-shadow-4xl mt-20 rounded-md -ml-40 rotate-12' fill='none' stroke='black' strokeWidth='2' strokeDasharray='12%2c 17%2c 16'  />
         </div>
 
       </section>
-      <div className='w-full h-48 bg-stone-950 absolute -bottom-14 blur-2xl z-20 m-0'></div>
+      <div className='hidden md:flex w-full h-48 bg-stone-950 absolute -bottom-14 blur-2xl z-10 m-0'></div>
     </section>
       
       <ExploreWorld />

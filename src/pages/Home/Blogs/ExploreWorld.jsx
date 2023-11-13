@@ -21,7 +21,7 @@ export const ExploreWorld = () => {
         </p>
       </div>
 
-      <div className='grid grid-cols-4 gap-5 my-16 px-5'>
+      <div className='grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 my-16 px-5'>
         {
           places && places.map(place => (
             <div key={crypto.randomUUID()} className='relative h-[500px] group overflow-hidden transition-shadow'>
