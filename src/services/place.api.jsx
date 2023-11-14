@@ -1,12 +1,12 @@
 import axios from 'axios'
 
 export const getPlaces = async() => {
-  const { data } = await axios.get('http://localhost:5000/place')
+  const { data } = await axios.get('https://blog-backend-j50n.onrender.com/place')
   return data
 }
 
 export const addPlace = async(token, newPlace) => {
-  const { data } = await axios.post('http://localhost:5000/place', newPlace, { headers: {
+  const { data } = await axios.post('https://blog-backend-j50n.onrender.com/place', newPlace, { headers: {
     'Content-Type': 'application/json',
     'Authorization': `Bearer ${token}`
   }} )
@@ -20,6 +20,6 @@ export const getListCountries = async() => {
 }
 
 export const getListPlaces = async() => {
-  const { data } =  await axios.get('http://localhost:5000/place')
+  const { data } =  await axios.get('https://blog-backend-j50n.onrender.com/place')
   return data
 }
