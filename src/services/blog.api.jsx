@@ -21,7 +21,8 @@ export const getBlogById = async(id) => {
 }
 
 export const getLocation = async(place) => {
-  const { data } = await axios.get('http://localhost:5000/blog/' + place )
+  console.log('Aqui')
+  const { data } = await axios.get('http://localhost:5000/blog/place/' + place )
   console.log(data)
   return data
 }
