@@ -11,10 +11,11 @@ export const BlogsByPlace = () => {
 
   useEffect(() => {
     getLocation(place)
-      .then(res => { setBlog(res)})
+      .then(res => { console.log(res); setBlog(res)})
       .catch(err => console.log(err))
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  console.log(place)
 
   return (
     <div>
